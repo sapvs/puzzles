@@ -1,15 +1,20 @@
 package other
 
 import (
-	"fmt"
 	"math/rand"
 	"testing"
 )
 
-func BenchmarkRadn(b *testing.B) {
-
-	fmt.Println(b.Name())
+func BenchmarkRandSer(b *testing.B) {
 	for i := 0; i < b.N; i++ {
 		rand.Int()
 	}
+}
+
+func BenchmarkRandPar(b *testing.B) {
+	b.RunParallel(func(pb *testing.PB) {
+		for pb.Next() {
+			rand.Int()
+		}
+	})
 }

@@ -1,9 +1,11 @@
 package prime
 
-import "math"
+import (
+	"math"
+)
 
-// PrimeV1 worst
-func PrimeV1(num int) bool {
+// IsPrimeV1 worst
+func IsPrimeV1(num int) bool {
 	if num == 1 {
 		return false
 	}
@@ -15,8 +17,8 @@ func PrimeV1(num int) bool {
 	return true
 }
 
-// PrimeV2 better
-func PrimeV2(num int) bool {
+// IsPrimeV2 better
+func IsPrimeV2(num int) bool {
 	if num == 1 {
 		return false
 	}
@@ -28,8 +30,8 @@ func PrimeV2(num int) bool {
 	return true
 }
 
-// PrimeV3 best
-func PrimeV3(num int) bool {
+// IsPrimeV3 best
+func IsPrimeV3(num int) bool {
 	if num == 1 {
 		return false
 	}
